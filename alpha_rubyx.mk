@@ -10,10 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/rubyx/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AlphaDroid stuff.
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_rubyx
+PRODUCT_NAME := alpha_rubyx
 PRODUCT_DEVICE := rubyx
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -28,4 +28,23 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemDevice=ruby
 
 # Build OkGoogle
-PRODUCT_HOTWORD_BUILD := false
+PRODUCT_HOTWORD_BUILD := true
+
+# Device config
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Build Config
+TARGET_BUILD_PACKAGE := 3
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := YagizErdemir
