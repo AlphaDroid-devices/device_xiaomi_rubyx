@@ -27,9 +27,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=ruby_global \
     SystemDevice=ruby
 
-# Build OkGoogle
-PRODUCT_HOTWORD_BUILD := true
-
 # Device config
 TARGET_HAS_UDFPS := false
 TARGET_ENABLE_BLUR := false
