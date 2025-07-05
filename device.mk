@@ -343,7 +343,8 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Build dependencies
 PRODUCT_PACKAGES += \
-    libbase_shim
+    libbase_shim \
+    libaudioclient_shim
 
 # Reduce system server verbosity.
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
