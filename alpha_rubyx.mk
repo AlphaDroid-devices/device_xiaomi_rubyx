@@ -13,6 +13,9 @@ $(call inherit-product, device/xiaomi/rubyx/device.mk)
 # Inherit some common AlphaDroid stuff.
 $(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
+# Enable animation override to fix lag on fewer mediatek devices
+PERF_ANIM_OVERRIDE := true
+
 PRODUCT_NAME := alpha_rubyx
 PRODUCT_DEVICE := rubyx
 PRODUCT_MANUFACTURER := Xiaomi
@@ -36,7 +39,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # Build Config
 TARGET_BUILD_PACKAGE := 3
 TARGET_INCLUDE_PIXEL_LAUNCHER := true
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
