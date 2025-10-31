@@ -27,12 +27,8 @@ namespace_imports = [
     'hardware/xiaomi',
 ]
 
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}-{partition}' if partition == 'vendor' else None
-
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -78,10 +74,6 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib/soundfx/libswdap.so',
      'vendor/lib64/soundfx/libswdap.so'): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system_ext/lib64/libsink-mtk.so': blob_fixup()
-        .add_needed('libaudioclient_shim.so'),
     ('vendor/lib/libnvram.so',
      'vendor/lib64/libnvram.so',
      'vendor/lib64/libsysenv.so',
@@ -94,8 +86,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmtkcam_grallocutils.so',
     'vendor/lib64/libmtkcam_3rdparty.vidhance.so'): blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
-    'system_ext/lib64/libsource.so': blob_fixup()
-        .add_needed('libui_shim.so')
 }
 
 module = ExtractUtilsModule(
