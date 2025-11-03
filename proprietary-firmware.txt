@@ -1,4 +1,4 @@
-# Unpinned blobs from HyperOS OS2.0.2.0.UMOMIXM (ruby) fastboot package
+# Unpinned blobs from HyperOS OS2.0.8.0.UMOMIXM (ruby) recovery package
 
 audio_dsp.img;AB
 cam_vpu1.img;AB
@@ -7,11 +7,11 @@ cam_vpu3.img;AB
 dpm.img;AB
 gz.img;AB
 lk.img;AB
-logo.bin:logo.img;AB
+logo.img;AB
 mcupm.img;AB
 md1img.img;AB
 pi_img.img;AB
-preloader_ruby.bin:preloader_raw.img;AB
+preloader_raw.img;AB
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB
