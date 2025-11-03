@@ -1056,6 +1056,8 @@ vendor/lib64/liblpcnr.so
 vendor/lib64/libm4u.so
 vendor/lib64/libmfllcore.so
 vendor/lib64/libmi_dspp.so
+vendor/lib/libmisight.so
+vendor/lib64/libmisight.so
 vendor/lib64/libmiStereoFactoryRemapBasicLib.so
 vendor/lib64/libmiStereoFactoryRemapLib.so
 vendor/lib64/libmiXmlParser.so
