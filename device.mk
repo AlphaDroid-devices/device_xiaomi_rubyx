@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayRubyPlus \
     FrameworksResOverlayRubyProPlus \
     FrameworksResOverlayRubyPro \
+    NetworkStackResOverlayRuby \
     SettingsProviderOverlayRubyPlus \
     SettingsProviderOverlayRubyProPlus \
     SettingsProviderOverlayRubyPro \
