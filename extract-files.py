@@ -85,6 +85,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
+    ('vendor/lib/librt_extamp_intf.so',
+     'vendor/lib/hw/audio.primary.mt6877.so',
+     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.14-impl.so'): blob_fixup()
+	 .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc': blob_fixup()
+        .regex_replace('start', 'enable'),
     ('vendor/lib64/libcam.hal3a.v3.so',
     'vendor/lib64/libeffecthal.base.so',
     'vendor/lib64/libmtkcam_grallocutils.so',
