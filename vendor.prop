@@ -13,6 +13,7 @@ vendor.audiohal.telephonytx.type=2
 vendor.audio.hdr.record.enable=false
 
 # Bluetooth
+bluetooth.hardware.power.operating_voltage_mv=3300
 ro.vendor.bt.platform=6877
 ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
